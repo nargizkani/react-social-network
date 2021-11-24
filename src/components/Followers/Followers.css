@@ -1,0 +1,25 @@
+.followers-wrapper {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@media screen and (min-width: 768px) {
+    .followers-wrapper {
+        flex-direction: row;
+    }
+}
+
+
+.followers-list a {
+    font-weight: bold;
+}
+
+.followers-list a:hover {
+    text-decoration: underline;
+}
+
+.followers-list a:active {
+    text-decoration: underline;
+}

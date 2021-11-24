@@ -1,0 +1,14 @@
+.container-sm {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+.btn-primary {
+    margin: 20px auto;
+    display: block;
+}

@@ -1,0 +1,26 @@
+nav {
+    background-color: blueviolet;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    padding: 15px 0;
+
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.link:active{
+    color: white;
+}
