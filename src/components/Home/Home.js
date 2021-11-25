@@ -4,7 +4,7 @@ export default function Home({authed}) {
     return (
         <main>
             <h1>
-                Welcome to the homepage!
+                Homepage
             </h1>
             {
                 authed ? (
@@ -13,7 +13,7 @@ export default function Home({authed}) {
                     </h2>
                 ) : (
                     <h2>
-                        Please login in to the system.
+                        Please login.
                     </h2>
                 )
             }

@@ -1,11 +1,28 @@
 nav {
-    background-color: blueviolet;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    z-index: 99;
+}
+.logo {
+    font-weight: 600;
+    font-size: 25px;
+    color: tomato;
 }
 
-.container {
-    padding: 15px 0;
+.logo font {
+    color: #fff;
+}
 
+
+.container {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .wrapper {
@@ -24,3 +41,11 @@ nav {
 .link:active{
     color: white;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+

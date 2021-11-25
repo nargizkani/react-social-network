@@ -1,4 +1,4 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import {Link, Routes, Route, Navigate, useNavigate} from "react-router-dom";
 import './App.css';
 import Follower from "./components/Followers/Follower";
@@ -9,6 +9,7 @@ import Profile from "./components/Profile/Profile";
 import NotFound from "./components/NotFound";
 
 export default function App() {
+
     const [authed, setAuthed] = useState(false);
     const navigate = useNavigate();
 
@@ -20,15 +21,18 @@ export default function App() {
 
     function logOut() {
         setAuthed(false);
-        navigate('/');
+        navigate('/home');
     }
 
     return (
         <main>
             <nav>
                 <div className="container wrapper">
+                    <div className="logo">
+                        REACT <font>Lab</font>
+                    </div>
                     <div>
-                        <Link to={["/","/home"]} className="link">
+                        <Link to={["/", "/home"]} className="link">
                             Home
                         </Link>
                         <Link to="/profile" className="link">
@@ -42,10 +46,10 @@ export default function App() {
                         <Link className="link" to='/login'>Login</Link>}
                 </div>
             </nav>
+
             <Routes>
                 <Route path="/home" element={<Home authed={authed}/>}/>
-                <Route path="/" element={<Home authed={authed}/>}/>
-                <Route path="*" element = {<NotFound/>}/>
+                <Route path="*" element={<NotFound/>}/>
                 <Route path="/profile" element={
                     <CheckIsAuthed authed={authed}>
                         <Profile/>
@@ -59,7 +63,6 @@ export default function App() {
                     <Route path=":follower" element={<Follower/>}/>
                 </Route>
                 <Route path="/login" element={<Login authed={authed} setAuthed={setAuthed}/>}/>
-
             </Routes>
         </main>
     )

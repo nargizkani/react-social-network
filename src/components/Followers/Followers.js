@@ -5,24 +5,27 @@ export default function Friends() {
     const friends = ['Daniel', 'Alex', 'Paige', 'Bethany'];
 
     return (
-        <section className="container">
+        <div>
             <h1>
                 Your followers
             </h1>
-            <main className="followers-wrapper">
-                <ul className="followers-list">
-                    {friends.map((person) => (
-                        <li>
-                            <Link to={`/followers/${person}`}>
-                                {person}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-                <div className="chosen-followers">
-                    <Outlet/>
-                </div>
-            </main>
-        </section>
-    )
+            <div className="container">
+                <main className="followers-wrapper">
+                    <ul className="followers-list">
+                        {friends.map((person) => (
+                            <li>
+                                <Link to={`/followers/${person}`}>
+                                    {person}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                    <div className="chosen-followers">
+                        <Outlet/>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+)
 }
